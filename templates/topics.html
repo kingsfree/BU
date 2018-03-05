@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    <title>社区</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container" id="content">
+		<div id="article-list-page">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="topic-list">
+							<div class="item">
+								<div class="nav nav-tabs-justified">
+									<li class="active" style="font-size: 16px;font-weight: bold"><a>默认排列</a></li>
+{#									<li><a href="#">最新发布</a></li>#}
+{#									<li><a href="#">优质主题</a></li>#}
+								</div>
+								<div class="box_white" style="padding:15px 25px;">
+									<ul class="note-list">
+                                        {% for article in pages %}
+										    <li>
+											<div class="content">
+												<div class="author">
+													<a href="#0" class="avatar avatartp">
+														<img src="/uploads/{{ article.author.avatar }}" alt="avatar">
+													</a>
+													<div class="name">
+														<a href="#0" class="blue-link">{{ article.author.username }}</a>
+														<span data-type="like_note">发表了【主题】· {{ article.date_publish|date:'Y-m-d H:i:s' }}</span>
+													</div>
+													<a class="title" href="{% url 'article' %}?menu_name={{ menu }}&id={{ article.id }}" target="_blank" title="{{ article.title }}">{{ article.title }}</a>
+												</div>
+												<p class="abstract">
+														{{ article.description }}
+												</p>
+												<div class="meta">
+													<span class="glyphicon glyphicon-tags"></span>
+                                                    {% for tag in article.tags.all %}
+													    <a class="collection-tag" href="#0">{{ tag }}</a>
+													{% endfor %}
+                                                    <span class="glyphicon glyphicon-eye-open"></span>{{ article.views }}
+													<span class="glyphicon glyphicon-comment"></span>{{ article.comments_set.all.count }}
+													<span class="glyphicon glyphicon-heart"></span>{{ article.likes_set.all.count }}
+												</div>
+											</div>
+										</li>
+										{% endfor %}
+                                        {% include 'pagination.html' %}
+									</ul>
+
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+					<div class="col-sm-3">
+                        {% if request.user.is_authenticated %}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="article_pub" href="{% url 'article_publicate' %}"><span class="glyphicon glyphicon-pencil"></span>发表文章</a>
+                            </div>
+                        </div>
+                        {% endif %}
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<span class="glyphicon glyphicon-tags"></span>
+									热门标签
+								</div>
+							</div>
+							<div class="panel-body">
+                                {% for tag in tag_list %}
+								    <a href="#0" class="label label-default">{{ tag }}</a>
+								{% endfor %}
+							</div>
+						</div>
+
+						<div class="panel panel-default" id="users">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<span class="glyphicon glyphicon-user"></span>
+									活跃用户
+								</div>
+							</div>
+							<ul class="list">
+                                {% for user in users_list %}
+								    <li>
+									<a class="avatar" href="#">
+										<img src="/uploads/{{ user.avatar }}" alt="user">
+									</a>
+									<a href="#0" class="name">{{ user.username }}</a>
+								</li>
+								{% endfor %}
+							</ul>
+
+                        </div>
+
+					</div>
+				</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,282 @@
+2017-10-11 13:33:24,407 [Thread-2:140644842374912] [BU.views:11] [views:index] [ERROR]- [Errno 2] No such file or directory: 'dd.txt'
+2017-10-11 18:55:31,926 [Thread-54:140310598289152] [BU.views:11] [views:index] [ERROR]- [Errno 2] No such file or directory: 'dd.txt'
+2017-10-11 18:55:34,113 [Thread-56:140310598289152] [BU.views:11] [views:index] [ERROR]- [Errno 2] No such file or directory: 'dd.txt'
+2017-10-13 13:57:56,790 [Thread-2:140485990373120] [BU.views:11] [views:index] [ERROR]- [Errno 2] No such file or directory: 'dd.txt'
+2017-10-13 20:01:36,585 [Thread-2:140406365529856] [BU.views:37] [views:article_list] [ERROR]- (3065, "Expression #1 of ORDER BY clause is not in SELECT list, references column 'BUdb.article.date_publish' which is not in SELECT list; this is incompatible with DISTINCT")
+2017-10-13 20:02:12,973 [Thread-2:139890498995968] [BU.views:38] [views:article_list] [ERROR]- (3065, "Expression #1 of ORDER BY clause is not in SELECT list, references column 'BUdb.article.date_publish' which is not in SELECT list; this is incompatible with DISTINCT")
+2017-10-13 20:04:40,203 [Thread-2:140314952275712] [BU.views:38] [views:article_list] [ERROR]- (3065, "Expression #1 of ORDER BY clause is not in SELECT list, references column 'BUdb.article.date_publish' which is not in SELECT list; this is incompatible with DISTINCT")
+2017-10-14 13:58:12,876 [Thread-4:140139023365888] [BU.views:60] [views:archive] [ERROR]- unsupported operand type(s) for +: 'NoneType' and 'str'
+2017-10-14 15:01:34,389 [Thread-2:140170129614592] [BU.views:55] [views:article_list] [ERROR]- getPage() missing 1 required positional argument: 'articles'
+2017-10-14 15:04:21,979 [Thread-2:139680647702272] [BU.views:55] [views:article_list] [ERROR]- getPage() missing 1 required positional argument: 'articles'
+2017-10-14 15:04:24,665 [Thread-4:139680630916864] [BU.views:55] [views:article_list] [ERROR]- getPage() missing 1 required positional argument: 'articles'
+2017-10-14 15:07:13,527 [Thread-12:139759036770048] [BU.views:67] [views:archive] [ERROR]- unsupported operand type(s) for +: 'NoneType' and 'str'
+2017-10-14 15:11:35,017 [Thread-22:139759036770048] [BU.views:67] [views:archive] [ERROR]- unsupported operand type(s) for +: 'NoneType' and 'str'
+2017-10-14 15:15:41,852 [Thread-24:139759036770048] [BU.views:67] [views:archive] [ERROR]- unsupported operand type(s) for +: 'NoneType' and 'str'
+2017-10-17 17:10:14,937 [Thread-2:140505075042048] [BU.views:59] [views:article_list] [ERROR]- invalid literal for int() with base 10: '技术'
+2017-10-17 17:43:13,288 [Thread-2:139830147180288] [BU.views:94] [views:life] [ERROR]- 'str' object has no attribute 'all'
+2017-10-17 18:23:49,783 [Thread-2:139837839243008] [BU.views:81] [views:article_list] [ERROR]- 'QuerySet' object has no attribute 'date_distinct'
+2017-10-17 18:29:51,194 [Thread-2:140175516555008] [BU.views:81] [views:article_list] [ERROR]- 'QuerySet' object has no attribute 'date_distinct'
+2017-10-17 18:37:20,752 [Thread-2:139785812649728] [BU.views:88] [views:article_list] [ERROR]- 'Article' object has no attribute 'values'
+2017-10-17 18:37:23,330 [Thread-4:139785804257024] [BU.views:88] [views:article_list] [ERROR]- 'Article' object has no attribute 'values'
+2017-10-17 18:37:27,161 [Thread-6:139785812649728] [BU.views:88] [views:article_list] [ERROR]- 'Article' object has no attribute 'values'
+2017-10-17 18:37:28,555 [Thread-8:139785804257024] [BU.views:88] [views:article_list] [ERROR]- 'Article' object has no attribute 'values'
+2017-10-17 20:05:01,112 [Thread-6:139712891815680] [BU.views:166] [views:category] [ERROR]- Cannot use None as a query value
+2017-10-18 16:51:00,421 [Thread-2:139739081549568] [BU.views:107] [views:article] [ERROR]- name 'MEDIA_ROOT' is not defined
+2017-10-18 16:51:25,861 [Thread-5:139739081549568] [BU.views:107] [views:article] [ERROR]- name 'MEDIA_ROOT' is not defined
+2017-10-18 16:52:18,383 [Thread-9:139739053659904] [BU.views:107] [views:article] [ERROR]- name 'MEDIA_ROOT' is not defined
+2017-10-19 16:52:56,475 [Thread-4:140329708713728] [BU.views:126] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 16:53:57,144 [Thread-8:140329697871616] [BU.views:126] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 17:13:19,099 [Thread-72:139757279500032] [BU.views:126] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 17:13:22,429 [Thread-76:139757384201984] [BU.views:126] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 17:31:52,843 [Thread-93:139757296285440] [BU.views:126] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 17:32:03,602 [Thread-97:139757296285440] [BU.views:126] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 17:34:13,397 [Thread-2:139704184026880] [BU.views:128] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 17:43:02,205 [Thread-2:140356159182592] [BU.views:128] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 17:46:43,859 [Thread-2:140402381113088] [BU.views:125] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 17:48:59,487 [Thread-5:140402381113088] [BU.views:125] [views:article] [ERROR]- name 'Comment' is not defined
+2017-10-19 18:48:53,166 [Thread-2:140404747712256] [BU.views:128] [views:article] [ERROR]- 'Comments' object does not support indexing
+2017-10-19 18:48:59,845 [Thread-6:140404736608000] [BU.views:128] [views:article] [ERROR]- 'Comments' object does not support indexing
+2017-10-19 18:52:12,740 [Thread-2:140654235617024] [BU.views:128] [views:article] [ERROR]- 'Comments' object does not support indexing
+2017-10-19 19:05:18,670 [Thread-2:139832142911232] [BU.views:132] [views:article] [ERROR]- 'Comments' object is not iterable
+2017-10-19 19:05:56,554 [Thread-8:139832134518528] [BU.views:132] [views:article] [ERROR]- 'Comments' object is not iterable
+2017-10-19 19:10:33,633 [Thread-2:140517736335104] [BU.views:135] [views:article] [ERROR]- 'Comments' object has no attribute 'children_coment'
+2017-10-19 19:12:01,894 [Thread-2:140518873388800] [BU.views:135] [views:article] [ERROR]- 'Comments' object has no attribute 'children_comment'
+2017-10-19 19:12:45,445 [Thread-2:140669590914816] [BU.views:133] [views:article] [ERROR]- 'Comments' object has no attribute 'children_comment'
+2017-10-19 22:51:35,042 [Thread-2:140603395741440] [BU.views:151] [views:article] [ERROR]- tree_search() missing 1 required positional argument: 'comment_obj'
+2017-10-19 22:56:32,261 [Thread-2:140106885678848] [BU.views:151] [views:article] [ERROR]- name 'request' is not defined
+2017-10-19 22:56:48,226 [Thread-10:140106639853312] [BU.views:151] [views:article] [ERROR]- name 'request' is not defined
+2017-10-20 15:57:11,766 [Thread-20:140259095856896] [BU.views:263] [views:do_reg] [ERROR]- Reverse for '' not found. '' is not a valid view function or pattern name.
+2017-10-20 19:12:32,784 [Thread-11:140502026524416] [BU.views:307] [views:comment_post] [ERROR]- name 'Comment' is not defined
+2017-10-20 19:23:00,983 [Thread-4:139753965737728] [BU.views:307] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 19:25:34,110 [Thread-5:140102693275392] [BU.views:307] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 20:07:21,586 [Thread-6:139936468559616] [BU.views:164] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 20:25:03,984 [Thread-17:140659566569216] [BU.views:166] [views:comment_post] [ERROR]- int() argument must be a string, a bytes-like object or a number, not 'Article'
+2017-10-20 20:25:34,878 [Thread-20:140659566569216] [BU.views:166] [views:comment_post] [ERROR]- int() argument must be a string, a bytes-like object or a number, not 'Article'
+2017-10-20 20:29:25,960 [Thread-4:139900951107328] [BU.views:166] [views:comment_post] [ERROR]- 'article.id'
+2017-10-20 20:44:45,090 [Thread-4:139709554534144] [BU.views:167] [views:comment_post] [ERROR]- int() argument must be a string, a bytes-like object or a number, not 'Article'
+2017-10-20 22:46:17,192 [Thread-6:140441377486592] [BU.views:167] [views:comment_post] [ERROR]- 'article_pk' is an invalid keyword argument for this function
+2017-10-20 22:49:10,891 [Thread-4:139634921604864] [BU.views:167] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 22:50:33,352 [Thread-2:140220848174848] [BU.views:167] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 22:52:57,139 [Thread-8:139858873927424] [BU.views:167] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 22:53:19,956 [Thread-11:139858873927424] [BU.views:167] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 22:53:41,009 [Thread-16:139858865534720] [BU.views:167] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 22:53:53,678 [Thread-19:139858899105536] [BU.views:167] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-20 22:55:55,466 [Thread-6:140100558124800] [BU.views:167] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-21 11:31:35,074 [Thread-2:140604137928448] [BU.views:170] [views:comment_post] [ERROR]- Cannot assign "'1'": "Comments.article" must be a "Article" instance.
+2017-10-21 11:42:21,952 [Thread-4:140391731058432] [BU.views:171] [views:comment_post] [ERROR]- too many values to unpack (expected 2)
+2017-10-21 13:00:30,982 [Thread-4:139688338827008] [BU.views:172] [views:comment_post] [ERROR]- 'article_pk' is an invalid keyword argument for this function
+2017-10-21 13:02:09,543 [Thread-9:139688338827008] [BU.views:172] [views:comment_post] [ERROR]- 'article_pk' is an invalid keyword argument for this function
+2017-10-21 13:02:33,688 [Thread-12:139688338827008] [BU.views:172] [views:comment_post] [ERROR]- 'article_pk' is an invalid keyword argument for this function
+2017-10-21 13:08:13,990 [Thread-5:140677602674432] [BU.views:172] [views:comment_post] [ERROR]- int() argument must be a string, a bytes-like object or a number, not 'Article'
+2017-10-21 13:11:43,478 [Thread-6:139943389165312] [BU.views:172] [views:comment_post] [ERROR]- 'article_id'
+2017-10-21 13:12:24,745 [Thread-2:140526529263360] [BU.views:172] [views:comment_post] [ERROR]- 'article_id'
+2017-10-21 13:13:19,530 [Thread-7:140526517896960] [BU.views:172] [views:comment_post] [ERROR]- 'article_id'
+2017-10-22 16:55:36,058 [Thread-2:140357221848832] [BU.views:173] [views:comment_post] [ERROR]- 'parent_id'
+2017-10-23 17:26:28,091 [Thread-114:140320773007104] [BU.views:312] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 17:36:58,112 [Thread-45:140210801202944] [BU.views:288] [views:do_reg] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 17:41:47,078 [Thread-76:140210809595648] [BU.views:316] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 17:44:55,381 [Thread-4:140156382766848] [BU.views:317] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 18:08:35,100 [Thread-116:140155855828736] [BU.views:288] [views:do_reg] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 18:13:41,529 [Thread-7:140221234444032] [BU.views:319] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 18:14:08,626 [Thread-10:140221234444032] [BU.views:319] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 18:15:13,787 [Thread-16:140221234444032] [BU.views:319] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 18:56:08,779 [Thread-37:140221242836736] [BU.views:319] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 19:11:17,567 [Thread-15:139925572073216] [BU.views:319] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 19:11:39,508 [Thread-23:139925572073216] [BU.views:319] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 19:27:49,676 [Thread-9:139734152263424] [BU.views:321] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 19:59:43,292 [Thread-6:139794231146240] [BU.views:321] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 20:10:48,279 [Thread-5:139929958999808] [BU.views:321] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 20:11:48,740 [Thread-2:139749077530368] [BU.views:321] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 20:16:02,347 [Thread-2:139649810614016] [BU.views:323] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 20:16:34,826 [Thread-2:140170546763520] [BU.views:323] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 20:17:23,398 [Thread-5:139654702266112] [BU.views:323] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 20:22:10,995 [Thread-4:140055321822976] [BU.views:323] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 21:00:17,060 [Thread-6:140645672584960] [BU.views:324] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-23 21:01:22,834 [Thread-2:139843679586048] [BU.views:324] [views:do_login] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-25 18:45:53,429 [Thread-2:139874183710464] [BU.views:315] [views:ajax_signup] [ERROR]- too many values to unpack (expected 2)
+2017-10-25 19:07:52,235 [Thread-3:139741612779264] [BU.views:314] [views:ajax_signup] [ERROR]- 0
+2017-10-25 19:54:28,932 [Thread-54:140611002898176] [BU.views:320] [views:ajax_signup] [ERROR]- list index out of range
+2017-10-25 19:57:41,974 [Thread-5:139961539815168] [BU.views:322] [views:ajax_signup] [ERROR]- list index out of range
+2017-10-25 20:02:15,181 [Thread-7:139946190952192] [BU.views:321] [views:ajax_signup] [ERROR]- 0
+2017-10-25 20:05:37,023 [Thread-5:140082947278592] [BU.views:321] [views:ajax_signup] [ERROR]- name 'error_messages' is not defined
+2017-10-25 20:06:45,432 [Thread-6:140082947278592] [BU.views:321] [views:ajax_signup] [ERROR]- name 'error_messages' is not defined
+2017-10-25 20:07:02,988 [Thread-47:140082572949248] [BU.views:321] [views:ajax_signup] [ERROR]- name 'error_messages' is not defined
+2017-10-25 20:12:43,820 [Thread-5:140371089655552] [BU.views:328] [views:ajax_signup] [ERROR]- list index out of range
+2017-10-25 20:28:07,889 [Thread-10:140112745006848] [BU.views:329] [views:ajax_signup] [ERROR]- list index out of range
+2017-10-25 20:30:08,666 [Thread-6:140672988342016] [BU.views:329] [views:ajax_signup] [ERROR]- list index out of range
+2017-10-25 20:35:24,729 [Thread-6:139786469631744] [BU.views:334] [views:ajax_signup] [ERROR]- list index out of range
+2017-10-25 20:36:54,111 [Thread-12:139786449610496] [BU.views:334] [views:ajax_signup] [ERROR]- list index out of range
+2017-10-25 20:41:39,360 [Thread-6:140098450073344] [BU.views:337] [views:ajax_signup] [ERROR]- list index out of range
+2017-10-25 20:44:00,557 [Thread-4:140132808759040] [BU.views:338] [views:ajax_signup] [ERROR]- 0
+2017-10-25 20:51:10,303 [Thread-5:139855848363776] [BU.views:337] [views:ajax_signup] [ERROR]- 'ErrorDict' object has no attribute 'username'
+2017-10-25 21:50:04,644 [Thread-2:139863893841664] [BU.views:337] [views:ajax_signup] [ERROR]- name 'error_messages' is not defined
+2017-10-25 22:03:53,355 [Thread-2:140120531695360] [BU.views:334] [views:ajax_signup] [ERROR]- name 'error_messages' is not defined
+2017-10-25 22:04:13,869 [Thread-3:140120531695360] [BU.views:334] [views:ajax_signup] [ERROR]- name 'error_messages' is not defined
+2017-10-26 15:16:56,107 [Thread-66:140521497196288] [BU.views:337] [views:ajax_login] [ERROR]- list index out of range
+2017-10-26 15:20:09,347 [Thread-68:140521497196288] [BU.views:337] [views:ajax_login] [ERROR]- list index out of range
+2017-10-26 15:21:45,468 [Thread-5:139963334403840] [BU.views:338] [views:ajax_login] [ERROR]- list index out of range
+2017-10-26 23:42:07,594 [Thread-61:140349993379584] [BU.views:412] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-26 23:46:05,678 [Thread-6:140243649091328] [BU.views:412] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-26 23:46:27,601 [Thread-10:140243416110848] [BU.views:412] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-26 23:47:45,728 [Thread-11:140019876484864] [BU.views:412] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-26 23:51:17,481 [Thread-2:140300693034752] [BU.views:413] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-26 23:57:15,445 [Thread-2:139686135478016] [BU.views:417] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-27 00:02:34,830 [Thread-7:140072346961664] [BU.views:417] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-27 00:12:35,380 [Thread-2:140049161647872] [BU.views:417] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-27 00:13:06,615 [Thread-8:140049042114304] [BU.views:417] [views:ajax_email] [ERROR]- (550, b'User has no permission')
+2017-10-27 13:35:03,422 [Thread-140:140083436971776] [BU.views:442] [views:reset_password] [ERROR]- 'NoneType' object has no attribute 'backend'
+2017-10-27 14:05:49,235 [Thread-50:139942073902848] [BU.views:460] [views:reset_password] [ERROR]- 'NoneType' object has no attribute 'backend'
+2017-10-27 14:10:51,323 [Thread-10:140228893996800] [BU.views:463] [views:reset_password] [ERROR]- 'NoneType' object has no attribute 'backend'
+2017-10-28 14:30:34,041 [Thread-2:139690335303424] [BU.views:347] [views:do_logout] [ERROR]- 'HTTP_REFERER'
+2017-10-28 15:15:20,338 [Thread-11:140106553788160] [BU.views:492] [views:likes_set] [ERROR]- Can't convert 'int' object to str implicitly
+2017-10-28 15:17:31,810 [Thread-34:140106595489536] [BU.views:492] [views:likes_set] [ERROR]- Can't convert 'int' object to str implicitly
+2017-10-28 15:24:03,366 [Thread-14:140547989214976] [BU.views:501] [views:likes_set] [ERROR]- Can't convert 'int' object to str implicitly
+2017-10-28 15:26:51,522 [Thread-5:140648200124160] [BU.views:504] [views:likes_set] [ERROR]- Can't convert 'int' object to str implicitly
+2017-10-28 15:27:40,975 [Thread-2:139715441985280] [BU.views:505] [views:likes_set] [ERROR]- Can't convert 'int' object to str implicitly
+2017-10-28 15:30:29,174 [Thread-28:139781021755136] [BU.views:505] [views:likes_set] [ERROR]- unsupported operand type(s) for -: 'str' and 'int'
+2017-10-28 15:31:41,550 [Thread-4:140275799803648] [BU.views:505] [views:likes_set] [ERROR]- Can't convert 'int' object to str implicitly
+2017-10-28 15:34:54,134 [Thread-5:140571863676672] [BU.views:508] [views:likes_set] [ERROR]- unsupported operand type(s) for -: 'str' and 'int'
+2017-10-28 15:38:01,137 [Thread-4:140393993463552] [BU.views:511] [views:likes_set] [ERROR]- Can't convert 'int' object to str implicitly
+2017-10-28 15:43:07,652 [Thread-9:140030659204864] [BU.views:512] [views:likes_set] [ERROR]- unsupported operand type(s) for -: 'str' and 'int'
+2017-10-28 15:51:39,555 [Thread-44:139913965684480] [BU.views:512] [views:likes_set] [ERROR]- list index out of range
+2017-10-29 10:38:11,008 [Thread-42:139984138725120] [BU.views:511] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: 'avatar/%Y/%m/1.jpg'
+2017-10-29 10:42:59,217 [Thread-8:140419422816000] [BU.views:515] [views:avatar_upload] [ERROR]- 'AvatarForm' object has no attribute 'cleaned_data'
+2017-10-29 10:43:47,920 [Thread-7:140286541825792] [BU.views:515] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: 'avatar/%Y/%m/405586,106.jpg'
+2017-10-29 10:51:46,429 [Thread-6:140619091531520] [BU.views:512] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: 'avatar/%Y/%m/405593,106.jpg'
+2017-10-29 10:53:54,524 [Thread-5:140175703267072] [BU.views:512] [views:avatar_upload] [ERROR]- 'MyUser' object has no attribute 'set_avatar'
+2017-10-29 10:55:34,581 [Thread-2:139784072722176] [BU.views:518] [views:avatar_upload] [ERROR]- 'MyUser' object has no attribute 'set_avatar'
+2017-10-29 11:11:36,168 [Thread-5:140393814361856] [BU.views:517] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: '../uploads/avatar/412882,106.jpg'
+2017-10-29 11:12:18,078 [Thread-4:140142666225408] [BU.views:517] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: '../uploads/avatar/bridge.jpg'
+2017-10-29 11:17:24,020 [Thread-5:140400914740992] [BU.views:518] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: '../uploads/avatar/405586,106.jpg'
+2017-10-29 12:02:26,142 [Thread-6:139760199071488] [BU.views:517] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: '/uploads//avatar/2017/10/449828,106.jpg'
+2017-10-29 12:04:29,830 [Thread-4:140320658413312] [BU.views:519] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: '/uploads//avatar/2017/10/412882,106.jpg'
+2017-10-29 12:06:13,293 [Thread-4:140421061666560] [BU.views:523] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: '/uploads//avatar/2017/10/111013,106.jpg'
+2017-10-29 12:11:11,714 [Thread-5:139909674632960] [BU.views:524] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: '/avatar/2017/10/364207,106.jpg'
+2017-10-29 21:43:24,884 [Thread-3:140124314662656] [BU.views:527] [views:avatar_upload] [ERROR]- [Errno 2] No such file or directory: '/avatar/2017/10/372709,106.jpg'
+2017-10-29 21:45:04,957 [Thread-4:140299424253696] [BU.views:527] [views:avatar_upload] [ERROR]- 'AvatarForm' object has no attribute 'cleaned_data'
+2017-10-29 22:12:22,309 [Thread-2:139847887521536] [BU.views:504] [views:avatar_upload] [ERROR]- name 'img' is not defined
+2017-10-29 22:13:29,257 [Thread-3:139847887521536] [BU.views:504] [views:avatar_upload] [ERROR]- name 'img' is not defined
+2017-10-29 22:45:28,636 [Thread-59:140710338365184] [BU.views:509] [views:avatar_upload] [ERROR]- <ImageFieldFile: avatar/2017/10/2.jpg> is not JSON serializable
+2017-10-29 22:47:11,897 [Thread-102:140710321579776] [BU.views:509] [views:avatar_upload] [ERROR]- <ImageFieldFile: avatar/2017/10/687838106.jpg> is not JSON serializable
+2017-10-29 22:49:10,175 [Thread-148:140710338365184] [BU.views:509] [views:avatar_upload] [ERROR]- <ImageFieldFile: avatar/2017/10/15.png> is not JSON serializable
+2017-10-31 13:04:14,596 [Thread-2:140659882338048] [BU.views:534] [views:article_publicate] [ERROR]- 'ArticlePubForm' object has no attribute 'cleaned_data'
+2017-10-31 14:45:13,593 [Thread-5:139664283399936] [BU.views:535] [views:article_publicate] [ERROR]- 'ImageField' object has no attribute 'use_required_attribute'
+2017-10-31 15:22:32,637 [Thread-2:139791811176192] [BU.views:536] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 15:22:43,833 [Thread-3:139791811176192] [BU.views:536] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 15:25:18,926 [Thread-2:140171866187520] [BU.views:539] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 15:25:33,287 [Thread-7:140171857794816] [BU.views:539] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 15:27:22,339 [Thread-8:140171857794816] [BU.views:539] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 15:32:26,577 [Thread-2:140382374942464] [BU.views:540] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 16:04:31,326 [Thread-9:139873418188544] [BU.views:539] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 16:56:59,108 [Thread-2:139906674411264] [BU.views:540] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:16:27,864 [Thread-2:140413515044608] [BU.views:541] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:16:34,896 [Thread-3:140413506651904] [BU.views:541] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:18:18,315 [Thread-2:140352993355520] [BU.views:543] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:20:00,397 [Thread-2:140008307447552] [BU.views:544] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:20:04,623 [Thread-3:140008299054848] [BU.views:544] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:23:10,179 [Thread-2:140575284057856] [BU.views:547] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:23:29,277 [Thread-2:139710909863680] [BU.views:547] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:24:31,807 [Thread-2:139713119577856] [BU.views:547] [views:article_publicate] [ERROR]- Cannot assign "'社区'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:25:57,943 [Thread-2:139855174350592] [BU.views:547] [views:article_publicate] [ERROR]- 'menu_category_name' is an invalid keyword argument for this function
+2017-10-31 17:26:07,687 [Thread-3:139855174350592] [BU.views:547] [views:article_publicate] [ERROR]- 'menu_category_name' is an invalid keyword argument for this function
+2017-10-31 17:26:25,053 [Thread-6:139855174350592] [BU.views:547] [views:article_publicate] [ERROR]- 'menu_category_name' is an invalid keyword argument for this function
+2017-10-31 17:29:17,124 [Thread-3:140164842772224] [BU.views:547] [views:article_publicate] [ERROR]- (1048, "Column 'category_id' cannot be null")
+2017-10-31 17:30:15,113 [Thread-2:140569023227648] [BU.views:547] [views:article_publicate] [ERROR]- (1048, "Column 'category_id' cannot be null")
+2017-10-31 17:31:08,969 [Thread-2:140089713977088] [BU.views:547] [views:article_publicate] [ERROR]- (1048, "Column 'category_id' cannot be null")
+2017-10-31 17:36:35,750 [Thread-2:140050419283712] [BU.views:546] [views:article_publicate] [ERROR]- Cannot assign "'4'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:36:55,937 [Thread-5:140050419283712] [BU.views:546] [views:article_publicate] [ERROR]- Cannot assign "'4'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:53:00,512 [Thread-3:140591727900416] [BU.views:546] [views:article_publicate] [ERROR]- Cannot assign "'4'": "Article.menu_category" must be a "MenuCategory" instance.
+2017-10-31 17:53:48,959 [Thread-3:140622229944064] [BU.views:546] [views:article_publicate] [ERROR]- (1048, "Column 'category_id' cannot be null")
+2017-10-31 18:00:36,083 [Thread-3:139735861905152] [BU.views:545] [views:article_publicate] [ERROR]- 'menu_category_name' is an invalid keyword argument for this function
+2017-10-31 18:01:27,213 [Thread-3:139888273762048] [BU.views:545] [views:article_publicate] [ERROR]- (1048, "Column 'category_id' cannot be null")
+2017-10-31 18:13:00,003 [Thread-4:140589043545856] [BU.views:541] [views:article_publicate] [ERROR]- (1048, "Column 'category_id' cannot be null")
+2017-10-31 18:19:09,240 [Thread-3:139855757035264] [BU.views:542] [views:article_publicate] [ERROR]- The database backend does not accept 0 as a value for AutoField.
+2017-10-31 18:26:30,252 [Thread-2:139895573706496] [BU.views:542] [views:article_publicate] [ERROR]- 'tags'
+2017-10-31 18:27:32,473 [Thread-3:140102548899584] [BU.views:542] [views:article_publicate] [ERROR]- 'tags'
+2017-10-31 18:35:08,329 [Thread-3:140029084219136] [BU.views:544] [views:article_publicate] [ERROR]- 'tags'
+2017-10-31 18:37:12,902 [Thread-3:140021209589504] [BU.views:544] [views:article_publicate] [ERROR]- 'tags'
+2017-10-31 18:52:01,749 [Thread-4:140510658221824] [BU.views:547] [views:article_publicate] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-31 19:21:26,747 [Thread-4:139675557689088] [BU.views:536] [views:article_publicate] [ERROR]- argument of type 'NoneType' is not iterable
+2017-10-31 19:24:05,897 [Thread-4:140518040196864] [BU.views:536] [views:article_publicate] [ERROR]- Can't convert 'NoneType' object to str implicitly
+2017-10-31 19:25:01,841 [Thread-4:139695128872704] [BU.views:538] [views:article_publicate] [ERROR]- Can't convert 'NoneType' object to str implicitly
+2017-11-01 17:06:07,447 [Thread-2:139733848422144] [BU.views:243] [views:topics] [ERROR]- name 'user' is not defined
+2017-11-01 17:12:59,644 [Thread-2:140400666257152] [BU.views:246] [views:topics] [ERROR]- 'QuerySet' object has no attribute 'avatar'
+2017-11-02 19:09:27,749 [Thread-17:139789298820864] [BU.views:582] [views:article_publicate] [ERROR]- Reverse for 'article_publicate' with no arguments not found. 1 pattern(s) tried: ['publicate_article/(?P<article_id>[0-9]+)$']
+2017-11-02 19:11:24,206 [Thread-38:139789307213568] [BU.views:582] [views:article_publicate] [ERROR]- Reverse for 'article_publicate' with no arguments not found. 1 pattern(s) tried: ['publicate_article/(?P<article_id>[0-9]+)$']
+2017-11-03 15:42:41,977 [Thread-8:140350798685952] [BU.views:635] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 15:45:56,422 [Thread-9:140438317037312] [BU.views:637] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 15:47:25,033 [Thread-4:139866000262912] [BU.views:637] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 15:47:35,580 [Thread-5:139866000262912] [BU.views:637] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 15:50:48,059 [Thread-8:139818307757824] [BU.views:638] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 15:52:53,904 [Thread-4:140013979100928] [BU.views:640] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 15:54:05,896 [Thread-7:140013979100928] [BU.views:640] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 16:00:29,193 [Thread-6:140630468740864] [BU.views:641] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 16:03:34,562 [Thread-4:140091606091520] [BU.views:649] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 16:05:17,300 [Thread-5:140309223081728] [BU.views:649] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-03 16:19:10,440 [Thread-8:140273305380608] [BU.views:650] [views:articleEdit] [ERROR]- invalid literal for int() with base 10: '<input type='
+2017-11-03 16:26:19,038 [Thread-12:140273305380608] [BU.views:650] [views:articleEdit] [ERROR]- local variable 'tagslist' referenced before assignment
+2017-11-03 16:29:29,358 [Thread-4:140690701104896] [BU.views:655] [views:articleEdit] [ERROR]- local variable 'tagslist' referenced before assignment
+2017-11-03 16:30:48,303 [Thread-4:140419587139328] [BU.views:655] [views:articleEdit] [ERROR]- local variable 'tagslist' referenced before assignment
+2017-11-03 16:32:55,125 [Thread-2:140342217144064] [BU.views:655] [views:articleEdit] [ERROR]- local variable 'tagslist' referenced before assignment
+2017-11-03 16:33:44,941 [Thread-11:140342175180544] [BU.views:655] [views:articleEdit] [ERROR]- local variable 'tagslist' referenced before assignment
+2017-11-03 16:35:05,680 [Thread-15:140342175180544] [BU.views:655] [views:articleEdit] [ERROR]- local variable 'tagslist' referenced before assignment
+2017-11-03 16:35:57,543 [Thread-4:140284334372608] [BU.views:655] [views:articleEdit] [ERROR]- local variable 'tagslist' referenced before assignment
+2017-11-03 16:38:47,063 [Thread-5:140063228811008] [BU.views:656] [views:articleEdit] [ERROR]- local variable 'tagslist' referenced before assignment
+2017-11-03 16:54:09,297 [Thread-5:139940830635776] [BU.views:655] [views:articleEdit] [ERROR]- 'str' object has no attribute 'name'
+2017-11-03 17:44:44,392 [Thread-15:140322079987456] [BU.views:637] [views:articleEdit] [ERROR]- Tags matching query does not exist.
+2017-11-03 17:45:08,005 [Thread-16:140322079987456] [BU.views:637] [views:articleEdit] [ERROR]- Tags matching query does not exist.
+2017-11-03 17:46:08,017 [Thread-2:140035901933312] [BU.views:637] [views:articleEdit] [ERROR]- Article matching query does not exist.
+2017-11-06 15:56:08,002 [Thread-51:140681262679808] [BU.views:667] [views:search] [ERROR]- list indices must be integers or slices, not str
+2017-11-06 15:56:31,751 [Thread-52:140681262679808] [BU.views:667] [views:search] [ERROR]- list indices must be integers or slices, not str
+2017-11-07 13:31:40,607 [Thread-66:140112586307328] [BU.views:677] [views:resultpage] [ERROR]- name 'keywords' is not defined
+2017-11-07 13:33:55,883 [Thread-67:140112586307328] [BU.views:677] [views:resultpage] [ERROR]- name 'keywords' is not defined
+2017-11-07 13:36:10,074 [Thread-57:140117704423168] [BU.views:683] [views:resultpage] [ERROR]- name 'keywords' is not defined
+2017-11-07 13:45:46,248 [Thread-119:140117687637760] [BU.views:683] [views:resultpage] [ERROR]- name 'keywords' is not defined
+2017-11-07 13:45:57,582 [Thread-120:140117687637760] [BU.views:683] [views:resultpage] [ERROR]- name 'keywords' is not defined
+2017-11-07 13:51:27,223 [Thread-79:140209851098880] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 13:53:15,864 [Thread-85:140209851098880] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 13:58:39,461 [Thread-99:140209878464256] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 13:59:15,163 [Thread-104:140209878464256] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 14:04:13,673 [Thread-2:140123240920832] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 14:04:34,940 [Thread-16:140123207350016] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 14:08:48,179 [Thread-20:140123207350016] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 14:58:22,024 [Thread-22:140123207350016] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 14:58:24,595 [Thread-36:140123240920832] [BU.views:683] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:01:43,866 [Thread-4:140046256969472] [BU.views:682] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:05:41,051 [Thread-5:140046256969472] [BU.views:682] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:05:45,054 [Thread-7:140046256969472] [BU.views:682] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:06:38,281 [Thread-14:140046256969472] [BU.views:682] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:06:51,230 [Thread-21:140046237210368] [BU.views:682] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:07:43,849 [Thread-26:140046237210368] [BU.views:682] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:41:17,702 [Thread-2:139699906246400] [BU.views:676] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:41:21,769 [Thread-3:139699906246400] [BU.views:676] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:41:30,389 [Thread-5:139699906246400] [BU.views:676] [views:resultpage] [ERROR]- Cannot use None as a query value
+2017-11-07 15:42:13,063 [Thread-59:139699878094592] [BU.views:676] [views:resultpage] [ERROR]- Cannot use None as a query value
+2018-01-05 13:06:48,404 [Thread-32:139648411723520] [BU.views:556] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 13:07:02,645 [Thread-33:139648411723520] [BU.views:556] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 13:07:17,224 [Thread-36:139648411723520] [BU.views:556] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 13:08:20,626 [Thread-37:139648411723520] [BU.views:556] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 13:13:21,834 [Thread-109:139648411723520] [BU.views:556] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 13:13:44,227 [Thread-110:139648411723520] [BU.views:556] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 13:13:55,955 [Thread-111:139648411723520] [BU.views:556] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 13:27:33,238 [Thread-79:140616708998912] [BU.views:160] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 13:29:24,735 [Thread-81:140616708998912] [BU.views:160] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 13:52:19,851 [Thread-55:140299737233152] [BU.views:160] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 14:36:17,492 [Thread-20:139900450653952] [BU.views:162] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 14:57:36,011 [Thread-10:140691570108160] [BU.views:162] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 15:15:21,565 [Thread-8:140276424869632] [BU.views:160] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 16:12:35,235 [Thread-20:140277775849216] [BU.views:160] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 16:28:41,608 [Thread-39:140444113753856] [BU.views:160] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 16:32:09,105 [Thread-43:140444113753856] [BU.views:556] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 17:17:01,995 [Thread-17:140635709044480] [BU.views:160] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 17:21:36,639 [Thread-8:140317839673088] [BU.views:165] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 17:24:17,219 [Thread-6:140255109838592] [BU.views:165] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 17:28:53,872 [Thread-6:139879218145024] [BU.views:168] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 17:32:47,757 [Thread-4:140285348919040] [BU.views:169] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 17:36:36,903 [Thread-4:139978840045312] [BU.views:169] [views:article] [ERROR]- 'bool' object is not callable
+2018-01-05 17:48:10,449 [Thread-18:140381028464384] [BU.views:565] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 18:00:33,623 [Thread-26:140687310980864] [BU.views:187] [views:comment_post] [ERROR]- 'bool' object is not callable
+2018-01-05 18:01:02,417 [Thread-30:140687310980864] [BU.views:187] [views:comment_post] [ERROR]- 'bool' object is not callable
+2018-01-05 18:25:12,385 [Thread-177:140687310980864] [BU.views:565] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-05 18:26:33,231 [Thread-180:140687310980864] [BU.views:565] [views:article_publicate] [ERROR]- (1452, 'Cannot add or update a child row: a foreign key constraint fails (`BUdb`.`article`, CONSTRAINT `article_category_id_99127861_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`))')
+2018-01-06 12:28:11,171 [Thread-316:140204434253568] [BU.views:187] [views:comment_post] [ERROR]- 'bool' object is not callable

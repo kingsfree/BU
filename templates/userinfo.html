@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    <title>个人中心</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container" id="content">
+		<div id="article-list-page">
+				<div class="row">
+                    <div class="col-sm-3">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="article_pub" href="{% url 'article_publicate' %}"><span class="glyphicon glyphicon-pencil"></span>发表文章</a>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="article_pub" href="#0" data-toggle="modal" data-target="#reset_avatar"><span class="glyphicon glyphicon-picture"></span>修改头像</a>
+                            </div>
+                        </div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<span class="glyphicon glyphicon-tags"></span>
+									我的信息
+								</div>
+							</div>
+							<div class="panel-body">
+                                <div class="usercard" style="margin-bottom: 10px;">
+                                    <img src="/uploads/{{ request.user.avatar }}" alt="头像" style="width: 100%;height: auto;">
+                                </div>
+                                <div class="usercard">
+                                    用户名：{{ request.user.username }}
+                                </div>
+                                <div class="usercard">
+                                    邮箱：{{ request.user.email }}
+                                </div>
+                                <div class="usercard">
+                                    注册时间：{{ request.user.date_joined|date:'Y-m-d H:i:s' }}
+                                </div>
+							</div>
+						</div>
+
+                        <div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="panel-title">
+									<span class="glyphicon glyphicon-tags"></span>
+									我的标签
+								</div>
+							</div>
+							<div class="panel-body">
+                                {% for tag in tag_list %}
+								    <a class="label label-default">{{ tag }}</a>
+								{% endfor %}
+							</div>
+						</div>
+
+					</div>
+					<div class="col-sm-9">
+
+                        <div class="panel-heading" id="user_articlelist">
+                            <span style="font-size: 16px; font-weight: bold;">文章列表</span>
+                        </div>
+
+						<div class="article-list">
+							{% for article in pages %}
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-2">
+										<div class="date">
+											<span class="day">{{ article.date_publish | date:'d' }}</span>
+											<span class="month">{{ article.date_publish | date:'Y-m' }}</span>
+										</div>
+									</div>
+									<div class="col-sm-10">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<div class="panel-title">
+													<div class="row">
+														<div class="col-sm-1">
+															<span class="glyphicon glyphicon-book"></span>
+														</div>
+														<div class="col-sm-11">
+															<a class="title" href="{% url 'article' %}?id={{ article.id }}" target="_blank" title="{{ article.title }}">{{ article.title }}</a>
+														</div>
+													</div>
+												</div>
+												<div class="small text-muted">
+													<!-- <span class="blank"></span> -->
+													<a href="#"><span class="glyphicon glyphicon-pushpin"></span>{{ article.category }}</a>-
+													<a href="#"><span class="glyphicon glyphicon-user"></span>{{ article.author.username }}</a>-
+													<span class="glyphicon glyphicon-tags"></span>
+                                                    {% for tag in article.tags.all %}
+													    <a class="tags">{{ tag.name }}</a>
+                                                    {% endfor %}
+												</div>
+											</div>
+											<div class="panel-body">
+												{{ article.description}}
+											</div>
+											<div class="panel-footer">
+                                                <span id="articleid" style="display: none">{{ article.id }}</span>
+												<div class="small text-muted">
+                                                    <a href="{% url 'article_edit' %}?articleid={{ article.id }}" class="leftside article_edit"><span class="glyphicon glyphicon-pencil"></span>编辑</a>
+                                                    <a href="#0" class="leftside article_delete"><span class="glyphicon glyphicon-trash"></span>删除</a>
+													<a><span class="glyphicon glyphicon-heart"></span>{{ article.likes_set.all.count }}</a>
+													<a><span class="glyphicon glyphicon-comment"></span>{{ article.comments_set.all.count }}</a>
+													<a><span class="glyphicon glyphicon-eye-open"></span>{{ article.views }}</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                            {% endfor %}
+                            {% include 'pagination.html' %}
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+{% endblock %}

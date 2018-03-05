@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block title %} {% endblock %}
+    <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+	<!-- navbar-fixed-top -->
+	<div class="navbar navbar-inverse showed" id="navbar_top" name="top" tabindex="1">
+		<div class="container">
+			<div class="narbar-header">
+				<a class="navbar-brand" href="{% url 'index' %}">BU</a>
+{#				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">#}
+{#					<span class="icon-bar"></span>#}
+{#					<span class="icon-bar"></span>#}
+{#					<span class="icon-bar"></span>#}
+{#				</button>#}
+			</div>
+			<div class="collapse navbar-collapse" id="navBar">
+				<ul class="nav navbar-nav navbar-left" id="menu">
+					<li><a href="{% url 'index' %}?menu_name=sy" target="_blank">首页</a></li>
+					<li><a href="{% url 'article_list' %}?menu_name=js" target="_blank">技术</a></li>
+					<li><a href="{% url 'project' %}?menu_name=xm" target="_blank">项目</a></li>
+					<li><a href="{% url 'life' %}?menu_name=sh" target="_blank">生活</a></li>
+					<li><a href="{% url 'topics' %}?menu_name=sq" target="_blank">社区</a></li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search" method="get" action="{% url 'resultpage' %}" target="_blank">
+                    {% csrf_token %}
+			        <div class="form-group" id="search_box">
+			        	<div class="input-group">
+				            <input type="search" class="form-control" id="keywords" placeholder="Search" autocomplete="off" name="keywords" required>
+				            <span class="input-group-btn">
+				            	<button type="submit" class="btn btn-default" id="search_btn"><span class="glyphicon glyphicon-search"></span></button>
+				            </span>
+			        	</div>
+                        <div class="search_result hidden">
+                        </div>
+			        </div>
+			    </form>
+				<div class="sign-nav">
+{#                    使用页面跳转方式#}
+					<ul class="nav navbar-nav navbar-right">
+                        {% if not request.user.is_authenticated %}
+                            <li><a class="cd-signin" href="#0"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
+                            <li><a class="cd-signup" href="#0"><span class="glyphicon glyphicon-log-in"></span> 注册</a></li>
+                        {% else %}
+
+                            <li class="dropdown">
+                                <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                                    <img class="useravatar" src="/uploads/{{ request.user.avatar }}" alt="头像">
+                                    您好,
+                                    <span id="login_username">{{ request.user.username }}</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+                                    {% if request.user.username == 'BUzzf' %}
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="/admin/" target="_blank">后台管理</a>
+                                        </li>
+                                    {% endif %}
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="{% url 'userinfo' %}" target="_blank">个人中心</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#0" data-toggle="modal" data-target="#reset_avatar">修改头像</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="{% url 'logout' %}?next={{ request.path }}">注销</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        {% endif %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+			<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+				<ul class="cd-switcher">
+					<li><a href="#0">用户登录</a></li>
+					<li><a href="#0">注册新用户</a></li>
+				</ul>
+
+				<div id="cd-login"> <!-- log in form -->
+					<form class="cd-form" id="login_form" action="">
+                        {% csrf_token %}
+                        <p class="fieldset">
+							<label class="image-replace cd-email" for="signin-email">E-mail</label>
+							<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="邮箱" name="email">
+                            <span class="cd-error-message"></span>
+						</p>
+						<p class="fieldset">
+							<label class="image-replace cd-password" for="signin-password">Password</label>
+							<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="密码" name="password">
+							<a href="#0" class="hide-password">Hide</a>
+                            <span class="cd-error-message"></span>
+						</p>
+						<p class="fieldset">
+							<input class="full-width" type="button" value="登  录" id="login">
+						</p>
+					</form>
+					<p class="cd-form-bottom-message"><a href="#0">忘记密码?</a></p>
+				</div> <!-- cd-login -->
+
+				<div id="cd-signup"> <!-- sign up form -->
+					<form class="cd-form" id="signup_form" action="">
+                        {% csrf_token %}
+						<p class="fieldset">
+							<label class="image-replace cd-username" for="signup-username">Username</label>
+							<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="用户名, 须介于2～16位之间" name="username">
+                            <span class="cd-error-message"></span>
+						</p>
+						<p class="fieldset">
+							<label class="image-replace cd-email" for="signup-email">E-mail</label>
+							<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="邮箱" name="email">
+                            <span class="cd-error-message"></span>
+						</p>
+						<p class="fieldset">
+							<label class="image-replace cd-password" for="signup-password">Password</label>
+							<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="密码, 须介于6～16位之间" name="password">
+							<a href="#0" class="hide-password">Hide</a>
+                            <span class="cd-error-message"></span>
+						</p>
+						<p class="fieldset">
+							<input class="full-width has-padding" type="button" value="注  册" id="signup">
+						</p>
+					</form>
+				</div> <!-- cd-signup -->
+
+				<div id="cd-forgot-password"> <!-- reset password form -->
+					<p class="cd-form-message">忘记密码了？请在下方输入您的注册邮箱，我们会发送一个验证码到您的邮箱，您可以重置您的密码</p>
+					<form class="cd-form" action="">
+                        {% csrf_token %}
+						<p class="fieldset">
+							<label class="image-replace cd-email" for="reset-email">E-mail</label>
+							<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="邮箱" name="email">
+							<span class="cd-error-message" id="reset-password-error"></span>
+						</p>
+						<p class="fieldset">
+							<input class="full-width has-padding" type="button" id="send-email" value="获取验证码">
+						</p>
+					</form>
+					<p class="cd-form-bottom-message"><a href="#0">返回登录页面</a></p>
+				</div> <!-- cd-reset-password -->
+
+                <div id="cd-reset-password">
+                    <form class="cd-form" id="" action="">
+                        {% csrf_token %}
+						<p class="fieldset">
+							<label class="image-replace cd-password" for="id-password">Nes Password</label>
+							<input class="full-width has-padding has-border" id="id-password" type="text"  placeholder="请输入新密码, 须介于6～16位之间" name="password">
+							<a href="#0" class="hide-password">Hide</a>
+                            <span class="cd-error-message"></span>
+						</p>
+                        <p class="fieldset">
+							<label class="image-replace cd-password" for="id-code">Verify Code</label>
+							<input class="full-width has-padding has-border" id="id-code" type="text"  placeholder="请输入6位数的验证码" name="verify_code">
+                            <span class="cd-error-message"></span>
+						</p>
+						<p class="fieldset">
+							<input class="full-width has-padding" type="button" value="密码重置" id="reset_button">
+                            <input type="hidden" name="code" id="hiddencode" value="">
+                            <input type="hidden" name="email" id="hiddenemail" value="">
+						</p>
+					</form>
+                </div>
+
+				<a href="#0" class="cd-close-form">Close</a>
+
+			</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+
+    <div class="modal fade" id="reset_avatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" id="avatar_close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">修改头像</h4>
+                </div>
+                <div class="modal-body">
+                    {#  上传文件的时候必须要在form标签中添加属性 enctype="multipart/form-data"  #}
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input class="imgUpload" type="file" name="img">
+                        <input type="hidden" name="img_user" id="img_user" value="{{ request.user.username }}">
+                        <button type="button" id="avatar_sbmit" class="btn btn-primary">上传</button>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+    {% block content %} {% endblock %}
+
+
+	<div class="go-top">
+        <a href="#top">
+          <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+    </div>
+
+	<!-- <div class="footer">
+		©CopyRight by BU(www.beu.com) All Aights Reserved
+	</div> -->
+
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/kindeditor-4.1.10/kindeditor-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/kindeditor-4.1.10/lang/zh_CN.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/kindeditor-4.1.10/config.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+
+</body>
+</html>

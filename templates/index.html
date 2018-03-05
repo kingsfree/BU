@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+	<title>{{ SITE_NAME }}</title>
+{% endblock %}
+
+
+{% block content %}
+	<div class="container" id="content">
+		<div id="myCarousel" class="carousel slide" >
+
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner">
+				<div class="item active">
+					<a href="#"><img src="{% static 'imgs/computer.png' %}" alt="First slide"></a>
+				</div>
+				<div class="item">
+					<a href="#"><img src="{% static 'imgs/book.png' %}" alt="Second slide"></a>
+				</div>
+				<div class="item">
+					<a href="#"><img src="{% static 'imgs/autumn.jpg' %}" alt="Third slide"></a>
+				</div>
+			</div>
+
+			<a class="carousel-control left" href="#myCarousel"
+			   data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#myCarousel"
+			   data-slide="next">&rsaquo;</a>
+		</div>
+
+
+		<div class="item-list">
+			<div class="item">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="category">
+							<a href="{% url 'article_list' %}?menu_name=js" target="_blank">技术</a>
+						</div>
+					</div>
+					<div class="col-sm-10">
+						<div class="article">
+
+							<!-- <div class="row"> -->
+                                {% for article in article_js %}
+								<div class="cell">
+									<a href="{% url 'article' %}?id={{ article.id }}" title="{{ article.title }}" target="_blank">
+										<img src="/uploads/{{ article.photo }}" alt="article">
+										<span>{{ article.title }}</span>
+									</a>
+								</div>
+								{% endfor %}
+								<div class="more" >
+									<a href="{% url 'article_list' %}?menu_name=js" target="_blank">
+										<span>查看更多</span>
+									</a>
+								</div>
+
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="category">
+							<a href="{% url 'project' %}?menu_name=xm" target="_blank">项目</a>
+						</div>
+					</div>
+					<div class="col-sm-10">
+						<div class="article">
+
+							<!-- <div class="row"> -->
+                                {% for article in article_xm %}
+								<div class="cell">
+									<a href="{% url 'article' %}?id={{ article.id }}" title="{{ article.title }}" target="_blank">
+										<img src="/uploads/{{ article.photo }}" alt="article">
+										<span>{{ article.title }}</span>
+									</a>
+								</div>
+								{% endfor %}
+								<div class="more" >
+									<a href="{% url 'project' %}?menu_name=xm" target="_blank">
+										<span>查看更多</span>
+									</a>
+								</div>
+
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="category">
+							<a href="{% url 'life' %}?menu_name=sh" target="_blank">生活</a>
+						</div>
+					</div>
+					<div class="col-sm-10">
+						<div class="article">
+
+							<!-- <div class="row"> -->
+                                {% for article in article_sh %}
+								<div class="cell">
+									<a href="{% url 'article' %}?id={{ article.id }}" title="{{ article.title }}" target="_blank">
+										<img src="/uploads/{{ article.photo }}" alt="article">
+										<span>{{ article.title }}</span>
+									</a>
+								</div>
+								{% endfor %}
+								<div class="more" >
+									<a href="{% url 'life' %}?menu_name=sh" target="_blank">
+										<span>查看更多</span>
+									</a>
+								</div>
+
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="category">
+							<a href="{% url 'topics' %}?menu_name=sq" target="_blank">社区</a>
+						</div>
+					</div>
+					<div class="col-sm-10">
+						<div class="article">
+
+							<!-- <div class="row"> -->
+                                {% for article in article_sq %}
+								<div class="cell">
+									<a href="{% url 'article' %}?id={{ article.id }}" title="{{ article.title }}" target="_blank">
+										<img src="/uploads/{{ article.photo }}" alt="article">
+										<span>{{ article.title }}</span>
+									</a>
+								</div>
+								{% endfor %}
+								<div class="more" >
+									<a href="{% url 'topics' %}?menu_name=sq" target="_blank">
+										<span>查看更多</span>
+									</a>
+								</div>
+
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

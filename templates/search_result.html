@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    <title>搜索结果</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container" id="content">
+		<div id="article-list-page">
+				<div class="row">
+                    <div class="col-sm-3">
+                        <div class="sidebar left">
+							<div class="list-group">
+								<div id="sidebar-title" class="list-group-item">近期文章</div>
+								<div id="item-list">
+                                    {% for article in recent_articles %}
+									<a class="list-group-item" href="{% url 'article' %}?id={{ article.id }}" target="_blank" title="{{ article.title }}">{{ article.title }}</a>
+                                    {% endfor %}
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-sm-9">
+
+                        <div class="panel-heading" id="user_articlelist">
+                            <span style="font-size: 16px; font-weight: bold;">搜索结果：标题含有"<span style="color: #e14d43;">{{ keyword }}</span>"的文章 <span style="color: #e14d43;">{{ articles.count }}</span> 篇</span>
+                        </div>
+
+						<div class="article-list">
+							{% for article in pages %}
+							<div class="item">
+								<div class="row">
+									<div class="col-sm-2">
+										<div class="date">
+											<span class="day">{{ article.date_publish | date:'d' }}</span>
+											<span class="month">{{ article.date_publish | date:'Y-m' }}</span>
+										</div>
+									</div>
+									<div class="col-sm-10">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<div class="panel-title">
+													<div class="row">
+														<div class="col-sm-1">
+															<span class="glyphicon glyphicon-book"></span>
+														</div>
+														<div class="col-sm-11">
+															<a class="title" href="{% url 'article' %}?id={{ article.id }}" target="_blank" title="{{ article.title }}">{{ article.title }}</a>
+														</div>
+													</div>
+												</div>
+												<div class="small text-muted">
+													<!-- <span class="blank"></span> -->
+													<a href="#"><span class="glyphicon glyphicon-pushpin"></span>{{ article.category }}</a>-
+													<a href="#"><span class="glyphicon glyphicon-user"></span>{{ article.author.username }}</a>-
+													<span class="glyphicon glyphicon-tags"></span>
+                                                    {% for tag in article.tags.all %}
+													    <a class="tags">{{ tag.name }}</a>
+                                                    {% endfor %}
+												</div>
+											</div>
+											<div class="panel-body">
+												{{ article.description}}
+											</div>
+											<div class="panel-footer">
+                                                <span id="articleid" style="display: none">{{ article.id }}</span>
+												<div class="small text-muted">
+													<a><span class="glyphicon glyphicon-heart"></span>{{ article.likes_set.all.count }}</a>
+													<a><span class="glyphicon glyphicon-comment"></span>{{ article.comments_set.all.count }}</a>
+													<a><span class="glyphicon glyphicon-eye-open"></span>{{ article.views }}</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+                            {% endfor %}
+                            {% include 'pagination.html' %}
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+{% endblock %}

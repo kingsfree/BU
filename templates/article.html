@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    <title>{{ article.title }}</title>
+{% endblock %}
+
+{% block content %}
+    {% load myfilter %}
+
+    <div class="container" id="content">
+		<div id="article-list-page">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="sidebar left">
+						<div class="list-group">
+							<div id="sidebar-title" class="list-group-item">近期文章</div>
+							<div id="item-list">
+								{% for article in recent_articles %}
+									<a class="list-group-item" href="{% url 'article' %}?id={{ article.id }}" target="_blank" title="{{ article.title }}">{{ article.title }}</a>
+                                    {% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-9">
+					<div class="article-list">
+						<div class="item">
+							<div class="row">
+								<div class="col-sm-2">
+									<div class="date">
+										<span class="day">{{ article.date_publish | date:'d' }}</span>
+                                        <span class="month">{{ article.date_publish | date:'Y-m' }}</span>
+									</div>
+								</div>
+								    <div class="col-sm-10" id="article_10">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<div class="panel-title">
+												<span class="glyphicon glyphicon-book"></span>
+												<span class="title">{{ article.title }}</span>
+                                                <span id="article_id" style="display: none">{{ article.id }}</span>
+											</div>
+											<div class="small text-muted">
+												<!-- <span class="blank"></span> -->
+												<a href="#"><span class="glyphicon glyphicon-pushpin"></span>{{ article.category }}</a>-
+                                                <a href="#"><span class="glyphicon glyphicon-user"></span>{{ article.author.username }}</a>-
+                                                <span class="glyphicon glyphicon-tags"></span>
+                                                {% for tag in article.tags.all %}
+                                                    <a class="tags">{{ tag.name }}</a>
+                                                {% endfor %}
+											</div>
+										</div>
+										<div class="panel-body" id="article">
+                                            {{ article.content | safe }}
+										</div>
+										<div class="panel-footer" id="aritcle_footer">
+											<div class="small text-muted">
+                                                {% if request.user.is_authenticated %}
+												<a href="#0" title="赞"><span class="glyphicon glyphicon-heart {% if status %}like{% endif %}" id="like_login"></span><span id="likes_num">{{ article.likes_set.all.count }}</span></a>
+                                                {% else %}
+                                                    <a href="#0" title="登录后才可以点赞"><span class="glyphicon glyphicon-heart" id="like"></span>{{ article.likes_set.all.count }}</a>
+                                                {% endif %}
+                                                <a href="#"><span class="glyphicon glyphicon-comment"></span>{{ article.comments_set.all.count }}</a>
+                                                <a href="#"><span class="glyphicon glyphicon-eye-open"></span>{{ article.views }}</a>
+											</div>
+										</div>
+										<div class="comments">
+                                            <form class="container" action="{% url 'comment_post' %}" role="form" method="post">
+                                                {% csrf_token %}
+												<div class="form-group" id="comment-form-group">
+													<label for="comment">评论一下</label>
+                                                    <input type="hidden" class="" name="pid" value="">
+                                                    {{ comment_form.content }}
+                                                    <input type="hidden" name="article" value="{{ article.id }}">
+													<button name="submit" type="submit" value="Submit">评论</button>
+												</div>
+											</form>
+											<div class="title">
+												<h3>共{{  article.comments_set.all.count }}条评论</h3>
+											</div>
+                                            <div class="body">
+                                                {% comment_tree comment_dict %}
+                                            </div>
+                                            <div class="" id="reply" style="display: none;">
+                                                <form class="container" action="{% url 'comment_post' %}" id="reply_form" role="form" method="post">
+                                                    {% csrf_token %}
+                                                    <div class="form-group" id="reply_form_group">
+                                                        <input type="hidden" class="parent_id" name="pid" value="">
+                                                        {{ comment_form.content }}
+                                                        <input type="hidden" name="article" value="{{ article.id }}">
+                                                        <button name="submit" type="submit" value="Submit">回复</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
