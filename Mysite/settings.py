@@ -27,7 +27,7 @@ SECRET_KEY = '(p3mlov0q0d_b_rrhq1m*@4kj^oqqjxu=vv-lex0773!-w2yii'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['182.61.39.233']
+ALLOWED_HOSTS = ['182.xx.xx.xxx']   # 你的公网IP
 
 
 # Application definition
@@ -141,8 +141,8 @@ SITE_NAME = 'BU首页'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'beuweb@163.com'
-EMAIL_HOST_PASSWORD = 'bu123456'
+EMAIL_HOST_USER = '*****@163.com'   # your email address
+EMAIL_HOST_PASSWORD = '*******'
 EMAIL_USER_TLS = False
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
